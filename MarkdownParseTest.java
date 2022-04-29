@@ -18,4 +18,14 @@ public class MarkdownParseTest {
         expected.add("https://something.com");
         assertEquals(expected, links);
     }
+
+@Test
+public void testFile8() throws IOException {
+     Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("a link on the first line");
+        assertEquals(expected, links);
+}
 }
