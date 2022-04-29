@@ -11,7 +11,7 @@ public class MarkdownParseTest {
     
  @Test
     public void getLinksTest() throws IOException {
-        Path fileName = Path.of("/Users/alexsurek/Documents/GitHub/markdown-parser/test-file.md");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> expected = new ArrayList<>();
