@@ -30,7 +30,7 @@ public class MarkdownParse {
                 return toReturn;
             }
             //to distinguish between image and link syntax
-            if(openBracket == 0){
+            if (openBracket == 0){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
             }
@@ -39,9 +39,6 @@ public class MarkdownParse {
                 continue;
             }
             //if it is 100% a link, add it to the list
-            //new change for lab
-            //adding a new line
-            //adding another new line
             else{
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 currentIndex = closeParen + 1;
